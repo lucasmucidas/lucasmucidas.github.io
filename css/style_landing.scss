@@ -6,7 +6,6 @@
 @import url(https://fonts.googleapis.com/css?family=Great+Vibes);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
-/* Colours */
 $twitter:        #6dabda;
 $linkedin:       #2b77b1;
 $xing:           #006567;
@@ -18,29 +17,15 @@ $instagram:      #cd486b;
 $reddit:         #cee3f8;
 $rss:            #eea33a;
 
-$darker:         #21211E;
 $dark:           #2D2D29;
-$medium:         #3B3B35;
-$light-medium:   #969696;
-$dark-blue:      #215A6D;
-$light-blue:     #3CA2A2;
-$green:          #92C7A3;
-$light:          #DFECE6;
 $white:          #FFFFFF;
-$dark-purple:    #300030;
-$medium-purple:  #480048;
-$regular-purple: #601848;
-$red:            #C04848;
-$orange:         #F07241;
+$light-green:    #9CC2BC;
 
-/* Responsive sizes */
 $screen-sm-min: 768px;
 $screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
-/* Globals */
-
-$bg-img: '../images/bg.jpg';
+$bg-img: '../images/bg.png';
 
 html {
 	height: 100%;
@@ -48,10 +33,11 @@ html {
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	background-color: $dark;
 	background-image: url($bg-img);
+	background-size:cover;
 	color: $white;
 	font-size: 16px;
 	height: 100%;
@@ -59,25 +45,28 @@ body {
 }
 
 p {
-	font-family: 'Roboto', sans-serif;
 	padding-top: 15px;
   } 
 
   .btn-white { 
-	color: #ffffff; 
+	color: $white; 
 	background-color: none; 
-	border-color: #FFFFFF; 
+	border-color: $white; 
 	margin-top: 20px;
 	margin-right: 15px;
   } 
    
   .btn-white:hover, 
   .btn-white:focus, 
+  .btn-white.focus,
   .btn-white:active, 
-  .btn-white.active, 
+  .btn-white.active,
+  .btn-white.onClick, 
   .open .dropdown-toggle.btn-white { 
-	color: #64878E; 
-	border-color: #64878E; 
+	color: $light-green; 
+	border-color: $light-green; 
+	font-weight: bold;
+	box-shadow: none;
   } 
    
 
@@ -99,15 +88,11 @@ p {
 }
 
 .content-panel {
-	//background-color: $medium;
-	//padding-top: 320px;
 	padding-bottom: 20px;
 	padding-left: 30px;
 	padding-right: 30px;
-	margin-top: 320px;
+	margin-top: 150px;
 	text-align: center;
-	//box-shadow: 0px 0px 0px 0px, 0px 6px 12px rgba(0, 0, 0, 0.2);
-	//border-bottom: 5px solid $light-blue;
 }
 
 .gravatar {
@@ -118,6 +103,7 @@ p {
 
 .author-avatar {
 	border-radius:50%;
+	border: 3px solid $light-green;
 }
 
 .index {
@@ -137,14 +123,87 @@ h2.background {
     z-index: 1;
     
     &:before {
-		border-top: 2px solid #dfdfdf;
+		border-top: 2px solid $white;
 		text-align: center;
         content:"";
-        margin: 0 auto; /* this centers the line to the full width specified */
-        position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+        margin: 0 auto;
+        position: absolute;
         top: 10%; left: 0; right: 0; bottom: 0;
 		width: 95%;
 		opacity: 0.1;
-        z-index: -1;
+		z-index: -1;
 	}
 }
+
+ h2.no-span {
+    display: table;
+	white-space: nowrap;
+	margin-top:35px;
+    &:before, &:after {
+      border-top: 2px solid $white;
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 0.5em;
+	  width: 45%;
+	  opacity: 0.1;
+    }
+    &:before { right: 1.5%; }
+    &:after { left: 1.5%; }
+}
+
+h2{
+	font-size: 16px;
+}
+
+	.fa {
+		-webkit-transition: 0.3s;
+		-moz-transition: 0.3s;
+		transition: 0.3s;
+		color: $white;
+		margin-right: 15px;
+		font-size: 40px;
+		margin-top: -5px;
+
+
+	}
+
+	.fa-twitter:hover {
+		color: $twitter;
+	}
+
+	.fa-linkedin:hover {
+		color: $linkedin;
+	}
+	
+	.fa-xing:hover {
+		color: $xing;
+	}
+
+	.fa-google-plus:hover {
+		color: $google-plus;
+	}
+	
+	.fa-facebook:hover {
+		color: $facebook;
+	}
+
+	.fa-github-alt:hover {
+		color: $github;
+	}
+
+	.fa-stack-overflow:hover {
+		color: $stack-overflow;
+	}
+	
+	.fa-instagram:hover {
+		color: $instagram;
+	}
+	
+	.fa-reddit-alien:hover {
+		color: $reddit;
+	}
+	
+	.fa-rss:hover {
+		color: $rss;
+	}
