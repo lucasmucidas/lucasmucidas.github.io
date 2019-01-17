@@ -1,0 +1,150 @@
+---
+---
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700);
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+/* Colours */
+$twitter:        #6dabda;
+$linkedin:       #2b77b1;
+$xing:           #006567;
+$google-plus:    #c95644;
+$facebook:       #365899;
+$github:         #f6c2a4;
+$stack-overflow: #c98b3b;
+$instagram:      #cd486b;
+$reddit:         #cee3f8;
+$rss:            #eea33a;
+
+$darker:         #21211E;
+$dark:           #2D2D29;
+$medium:         #3B3B35;
+$light-medium:   #969696;
+$dark-blue:      #215A6D;
+$light-blue:     #3CA2A2;
+$green:          #92C7A3;
+$light:          #DFECE6;
+$white:          #FFFFFF;
+$dark-purple:    #300030;
+$medium-purple:  #480048;
+$regular-purple: #601848;
+$red:            #C04848;
+$orange:         #F07241;
+
+/* Responsive sizes */
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+/* Globals */
+
+$bg-img: '../images/bg.jpg';
+
+html {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	background-color: $dark;
+	background-image: url($bg-img);
+	color: $white;
+	font-size: 16px;
+	height: 100%;
+	width: 100%
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	padding-top: 15px;
+  } 
+
+  .btn-white { 
+	color: #ffffff; 
+	background-color: none; 
+	border-color: #FFFFFF; 
+	margin-top: 20px;
+	margin-right: 15px;
+  } 
+   
+  .btn-white:hover, 
+  .btn-white:focus, 
+  .btn-white:active, 
+  .btn-white.active, 
+  .open .dropdown-toggle.btn-white { 
+	color: #64878E; 
+	border-color: #64878E; 
+  } 
+   
+
+.author-header {
+	font-family: 'Great Vibes', cursive;
+	margin-top: 0px;
+	padding-top: 35px;
+	font-size: 30px;
+
+	@media (min-width: $screen-sm-min) {
+		font-size: 52px;
+		margin-top: 0px;
+	}
+
+	@media (min-width: $screen-md-min) {
+		font-size: 60px;
+		margin-top: -20px;
+	}
+}
+
+.content-panel {
+	//background-color: $medium;
+	//padding-top: 320px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-top: 320px;
+	text-align: center;
+	//box-shadow: 0px 0px 0px 0px, 0px 6px 12px rgba(0, 0, 0, 0.2);
+	//border-bottom: 5px solid $light-blue;
+}
+
+.gravatar {
+	width: 100%;
+	margin-top: -80px;
+	text-align: center;
+}
+
+.author-avatar {
+	border-radius:50%;
+}
+
+.index {
+	height: 100%;
+	max-height: 100%;
+	width: 100%;
+	padding: 0px;
+
+	@media (min-width: $screen-sm-min) {
+		width: 700px;
+		max-width:700px;
+	}
+}
+
+h2.background {
+    position: relative;
+    z-index: 1;
+    
+    &:before {
+		border-top: 2px solid #dfdfdf;
+		text-align: center;
+        content:"";
+        margin: 0 auto; /* this centers the line to the full width specified */
+        position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+        top: 10%; left: 0; right: 0; bottom: 0;
+		width: 95%;
+		opacity: 0.1;
+        z-index: -1;
+	}
+}
