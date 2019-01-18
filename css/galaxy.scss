@@ -3,20 +3,16 @@
 @import url(https://fonts.googleapis.com/css?family=Great+Vibes);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
-$twitter:        #6dabda;
-$linkedin:       #2b77b1;
-$xing:           #006567;
-$google-plus:    #c95644;
-$facebook:       #365899;
-$github:         #f6c2a4;
-$stack-overflow: #c98b3b;
-$instagram:      #cd486b;
-$reddit:         #cee3f8;
-$rss:            #eea33a;
-
 $dark:           #2D2D29;
 $white:          #FFFFFF;
 $light-green:    #9CC2BC;
+
+$twitter:        $light-green;
+$linkedin:       $light-green;
+$github:         $light-green;
+$instagram:      $light-green;
+$reddit:         $light-green;
+$rss:            $light-green;
 
 $screen-sm-min: 768px;
 $screen-md-min: 992px;
@@ -33,7 +29,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	background-color: $dark;
-	background-image: url($bg-img);
+	//background-image: url($bg-img);
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:center;
@@ -174,25 +170,9 @@ h2{
 	.fa-linkedin:hover {
 		color: $linkedin;
 	}
-	
-	.fa-xing:hover {
-		color: $xing;
-	}
-
-	.fa-google-plus:hover {
-		color: $google-plus;
-	}
-	
-	.fa-facebook:hover {
-		color: $facebook;
-	}
 
 	.fa-github-alt:hover {
 		color: $github;
-	}
-
-	.fa-stack-overflow:hover {
-		color: $stack-overflow;
 	}
 	
 	.fa-instagram:hover {
