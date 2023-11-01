@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://lucasmucidas.com.com/ws/sitemap-index.xml
+Host: https://lucasmucidas.com.com
